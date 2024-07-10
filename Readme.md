@@ -20,7 +20,7 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/Chicken-Disease-Classification--Project
+https://github.com/AmbicaAnkadMagic/Chicken_Disease_Classification_Project
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
@@ -127,9 +127,32 @@ open up you local host and port
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = 
+    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
     ECR_REPOSITORY_NAME = simple-app
 
 
 
+
+# AZURE-CICD-Deployment-with-Github-Actions
+
+## Save pass:
+
+#########
+
+
+## Run from terminal:
+
+docker build -t chickenapp.azurecr.io/chicken:latest .
+
+docker login chickenapp.azurecr.io
+
+docker push chickenapp.azurecr.io/chicken:latest
+
+
+## Deployment Steps:
+
+1. Build the Docker image of the Source Code
+2. Push the Docker image to Container Registry
+3. Launch the Web App Server in Azure 
+4. Pull the Docker image from the container registry to Web App server and run 
